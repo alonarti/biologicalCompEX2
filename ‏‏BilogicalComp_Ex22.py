@@ -11,7 +11,7 @@ def generate_motifs(n, edges):
     G.add_edges_from(edges)
     subgraphs = [G.subgraph(nodes).copy() for nodes in combinations(G.nodes, n)]
     motif_instances = find_motif_instances(subgraphs, n)
-    filename = f"subgraphs.txt"
+    filename = f"motifs.txt"
     with open(filename, "w") as file:
      file.write(f"n={n}\n")
      motif_id = 1
