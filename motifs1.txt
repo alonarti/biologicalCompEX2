@@ -4,3 +4,7 @@ count=1
 2 1
 4 1
 3 2
+
+
+from here is not the original outputs txt file, its just my commant for the tester:
+The input was graphe [(1,2),(1,4),(2,3)] and n=4
