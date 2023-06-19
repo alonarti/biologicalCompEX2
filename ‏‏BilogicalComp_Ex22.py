@@ -11,17 +11,18 @@ def generate_motifs(n, edges):
     G.add_edges_from(edges)
     subgraphs = [G.subgraph(nodes).copy() for nodes in combinations(G.nodes, n)]
     motif_instances = find_motif_instances(subgraphs, n)
-
-    print(f"n={n}")
-    motif_id = 1
-    for motif, instances in motif_instances.items():
-        print(f"#{motif_id}")
-        print(f"count={len(instances)}")
-        for instance in instances:
-            for edge in instance.edges:
-                print(edge[0], edge[1])
-        motif_id += 1
-        print()
+    filename = f"subgraphs.txt"
+    with open(filename, "w") as file:
+     file.write(f"n={n}\n")
+     motif_id = 1
+     for motif, instances in motif_instances.items():
+         file.write(f"#{motif_id}\n")
+         file.write(f"count={len(instances)}\n")
+         for instance in instances:
+             for edge in instance.edges:
+                 file.write(f"{edge[1]} {edge[0]}\n")
+         motif_id += 1
+         file.write("")
 
 def relabel_graph(G):
     """Relabels the nodes of a graph in ascending order."""
