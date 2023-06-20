@@ -1,7 +1,7 @@
 # biologicalCompEX2 
 How to use the codes:
 
-Ex2_1:
+Ex2_1 (its called here main.py):
 call the function with n, the output will be In txt file which is opend while the code running.
 
 Ex2_2:
