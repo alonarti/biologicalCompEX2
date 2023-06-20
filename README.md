@@ -1,5 +1,6 @@
 # biologicalCompEX2 
 How to use the codes:
+
 Ex2_1:
 call the function with n, the output will be In txt file which is opend while the code running.
 
